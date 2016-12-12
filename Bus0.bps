@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+<org.eventb.core.psStatus name="inv7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="36" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv7/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/act1/FIS" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="USER_ARRIVES/grd1/THM" org.eventb.core.confidence="0" org.eventb.core.poStamp="36" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="USER_ARRIVES/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="36" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="USER_ENTERS/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="36" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="USER_ENTERS/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="36" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="USER_ENTERS/inv6/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="36" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="USER_ENTERS/inv7/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="36" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="USER_LEAVES/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="36" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="USER_LEAVES/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="36" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="USER_LEAVES/inv6/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="36" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="USER_LEAVES/inv7/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="36" org.eventb.core.psManual="false"/>
+</org.eventb.core.psFile>
