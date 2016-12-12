@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="Users1"/>
+<org.eventb.core.refinesMachine name=")" org.eventb.core.target="Bus"/>
+<org.eventb.core.variable name="+" org.eventb.core.comment="passengers in the bus who want to go out" org.eventb.core.identifier="leaving_passengers"/>
+<org.eventb.core.variable name="var1" org.eventb.core.comment="All passengers in the bus" org.eventb.core.identifier="passengers"/>
+<org.eventb.core.variable name="var2" org.eventb.core.comment="Users waiting at the bus station" org.eventb.core.identifier="waiting"/>
+<org.eventb.core.event name="," org.eventb.core.comment="One passenger leaves the bus" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="leave_one">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="leave_one"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="var3" org.eventb.core.comment="One user from the users waiting at the bus station enters in the bus" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="enter_one">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="enter_one"/>
+<org.eventb.core.guard name="/" org.eventb.core.comment="Highest priority for the user who is going to enter in the bus" org.eventb.core.label="grd5" org.eventb.core.predicate="∀ w · w ∈ waiting ⇒ priority(w) ≤ priority(waiting_user)"/>
+<org.eventb.core.guard name="0" org.eventb.core.comment="Civism" org.eventb.core.label="grd1" org.eventb.core.predicate="leaving_passengers = ∅"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="var4" org.eventb.core.comment="One user arrives at the bus station" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="enter_one_waiting">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="enter_one_waiting"/>
+</org.eventb.core.event>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" de.prob.units.unitPragmaAttribute="" name="var5" org.eventb.core.comment="passengers who left the bus" org.eventb.core.identifier="gone_passengers"/>
+</org.eventb.core.machineFile>

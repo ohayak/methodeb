@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="inv4/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.prSets="Users">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2,p1,p3">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="waiting" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(Users)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(passengers)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="n∈ℕ"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="waiting⊆Users"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="passengers∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="passengers⊆Users"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="inv4/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="waiting⊆Users">
+<org.eventb.core.prIdent name="Users" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="waiting" org.eventb.core.type="ℙ(Users)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="passengers⊆Users">
+<org.eventb.core.prIdent name="Users" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="passengers" org.eventb.core.type="ℙ(Users)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="Users">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="passengers'" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="passengers'∩(∅ ⦂ ℙ(Users))=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/act1/FIS" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.prSets="Users" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∃ goal (inst ∅,∅)" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p8" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p9">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p9" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ah (n∈ℕ)" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p8" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p2">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p2" org.eventb.core.prHyps="p2"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name=")" org.eventb.core.prHyps="p2">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p10" org.eventb.core.prHyps="p2,p1,p6">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="30000"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prPredRef name=".pred" org.eventb.core.prRef="p2"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prExprRef name=".exprs" org.eventb.core.prRef="e0,e0,e0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(Users)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀passengers'⦂ℙ(Users)·⊤⇒finite(passengers')"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="card(∅ ⦂ ℙ(Users))≤n∧(∅ ⦂ ℙ(Users))⊆(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀passengers'⦂ℙ(Users)·finite(passengers')"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∃passengers'⦂ℙ(Users),leaving_passengers'⦂ℙ(Users)·passengers'⊆Users∧card(passengers')≤n∧leaving_passengers'⊆passengers'"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="n∈ℕ"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="∃passengers'⦂ℙ(Users),leaving_passengers'⦂ℙ(Users)·card(passengers')≤n∧leaving_passengers'⊆passengers'"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="∃passengers'⦂ℙ(Users),leaving_passengers'⦂ℙ(Users)·⊤∧card(passengers')≤n∧leaving_passengers'⊆passengers'"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="0≤n"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀passengers'⦂ℙ(Users)·passengers'⊆Users⇒finite(passengers')"/>
+<org.eventb.core.prExpr name="e0" org.eventb.core.expression="∅ ⦂ ℙ(Users)"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.cut"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.exI"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="passengers0'" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="Users">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p3" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees passengers0')" org.eventb.core.prGoal="p4" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+<org.eventb.core.prIdent name="passengers0'" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="p2,p1">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(Users)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀passengers'⦂ℙ(Users)·⊤⇒finite(passengers')"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀passengers'⦂ℙ(Users)·finite(passengers')"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="n∈ℕ"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(passengers0')">
+<org.eventb.core.prIdent name="passengers0'" org.eventb.core.type="ℙ(Users)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀passengers'⦂ℙ(Users)·passengers'⊆Users⇒finite(passengers')"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="Users">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p0">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊥ hyp" org.eventb.core.prHyps="p3"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="leaving_passengers'" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="passengers'" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="passengers'⊆Users∧card(passengers')≤n∧leaving_passengers'⊆passengers'"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="⊥"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="leaving_passengers'⊆passengers'"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="passengers'⊆Users∧card(passengers')≤n∧⊥"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.falseHyp"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="leave/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7" org.eventb.core.prSets="Users">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p9" org.eventb.core.prHyps="p2,p1,p4,p5,p3,p7,p8">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="leaving_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="waiting" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(Users)"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬leaving_passengers=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="n∈ℕ"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="finite(passengers)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="waiting⊆Users"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="passengers∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="card(passengers)≤n"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(passengers ∖ leaving_passengers)∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="passengers⊆Users"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="passengers∩waiting⊆leaving_passengers"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="leaving_passengers≠(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="leaving_passengers⊆passengers"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="leave/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="Users">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p3" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="leaving_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬leaving_passengers=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="leaving_passengers≠(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(Users))⊆passengers ∖ leaving_passengers"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="leave_all/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7" org.eventb.core.prSets="Users">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p9" org.eventb.core.prHyps="p2,p1,p4,p5,p3,p7,p8">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="leaving_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="waiting" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(Users)"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬leaving_passengers=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="n∈ℕ"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="finite(passengers)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="waiting⊆Users"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="passengers∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="card(passengers)≤n"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(passengers ∖ leaving_passengers)∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="passengers⊆Users"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="passengers∩waiting⊆leaving_passengers"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="leaving_passengers≠(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="leaving_passengers⊆passengers"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="leave_all/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="Users">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p3" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="leaving_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬leaving_passengers=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="leaving_passengers≠(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(Users))⊆passengers ∖ leaving_passengers"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="enter_one/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0" org.eventb.core.prSets="Users">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prIdent name="passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(passengers)"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="enter_one/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11" org.eventb.core.prSets="Users">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p13">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p12"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p13" org.eventb.core.prHyps="p4,p1,p8,p9,p5,p10,p3,p11,p7,p2,p12">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="gone_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="leaving_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="waiting" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="waiting_user" org.eventb.core.type="Users"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(passengers∪{waiting_user})∩(waiting ∖ {waiting_user})=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="n∈ℕ"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="gone_passengers⊆Users"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="passengers∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="card(passengers)≤n"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="passengers⊆Users"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="leaving_passengers⊆passengers"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="gone_passengers∩passengers=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(Users)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="waiting_user∈waiting"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="gone_passengers∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(passengers)"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="waiting⊆Users"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="waiting≠(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="card(passengers)&lt;n"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="(passengers∪{waiting_user})∩waiting⊆{waiting_user}"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="enter_one/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11" org.eventb.core.prSets="Users">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p12"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p1,p8,p9,p5,p10,p3,p11,p7,p2,p12">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="gone_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="leaving_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="waiting" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="waiting_user" org.eventb.core.type="Users"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="leaving_passengers⊆passengers∪{waiting_user}"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="n∈ℕ"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="gone_passengers⊆Users"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="passengers∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="card(passengers)≤n"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="passengers⊆Users"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="leaving_passengers⊆passengers"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="gone_passengers∩passengers=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(Users)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="waiting_user∈waiting"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="gone_passengers∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(passengers)"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="waiting⊆Users"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="waiting≠(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="card(passengers)&lt;n"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="Users">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p0">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p4"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊥ hyp" org.eventb.core.prHyps="p6"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="leaving_passengers'" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="passengers'" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="passengers'⊆Users∧⊥∧leaving_passengers'⊆passengers'"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="passengers'⊆Users∧card(passengers')≤n∧leaving_passengers'⊆passengers'"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="⊥"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="passengers'⊆Users⇒finite(passengers')"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="card(passengers')≤n"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="passengers'⊆Users⇒⊤"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(passengers')"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.falseHyp"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="leave_all/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8" org.eventb.core.prSets="Users">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p3,p1,p5,p6,p4,p8,p2,p9">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="leaving_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="waiting" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(Users)"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬leaving_passengers=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="card(passengers ∖ leaving_passengers)≤n"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="finite(passengers ∖ leaving_passengers)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="n∈ℕ"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(passengers)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="waiting⊆Users"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="passengers∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="card(passengers)≤n"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="passengers⊆Users"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="leaving_passengers≠(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="leaving_passengers⊆passengers"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="enter_one/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12" org.eventb.core.prSets="Users">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p14">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p17"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p14" org.eventb.core.prHyps="p4,p1,p9,p10,p5,p11,p3,p12,p8,p2,p6,p13">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="gone_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="leaving_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="waiting" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="waiting_user" org.eventb.core.type="Users"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="n∈ℕ"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="finite(passengers∪{waiting_user})"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="gone_passengers⊆Users"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="passengers∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="card(passengers)≤n"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="passengers⊆Users"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="leaving_passengers⊆passengers"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="card(passengers∪{waiting_user})≤n"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="gone_passengers∩passengers=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(Users)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="waiting_user∈waiting"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="card(passengers)+1 − card(passengers∩{waiting_user})≤n"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="gone_passengers∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(passengers)"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="waiting⊆Users"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="waiting≠(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="card(passengers)&lt;n"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="leave_one/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8" org.eventb.core.prSets="Users">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p10" org.eventb.core.prHyps="p2,p1,p4,p5,p3,p7,p8,p9">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="leaving_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="p" org.eventb.core.type="Users"/>
+<org.eventb.core.prIdent name="passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="waiting" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="n∈ℕ"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="passengers∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="card(passengers)≤n"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="passengers⊆Users"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(passengers ∖ {p})∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="leaving_passengers⊆passengers"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(Users)"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬leaving_passengers=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="finite(passengers)"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="waiting⊆Users"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="passengers∩waiting⊆{p}"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="leaving_passengers≠(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="p∈leaving_passengers"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="leave_one/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9" org.eventb.core.prSets="Users">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p10"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p3,p1,p5,p6,p4,p8,p9,p2,p10">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="leaving_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="p" org.eventb.core.type="Users"/>
+<org.eventb.core.prIdent name="passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="waiting" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="n∈ℕ"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="card(passengers ∖ {p})≤n"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="passengers∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="card(passengers)≤n"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="passengers⊆Users"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="leaving_passengers⊆passengers"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(Users)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬leaving_passengers=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="finite(passengers ∖ {p})"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(passengers)"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="waiting⊆Users"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="leaving_passengers≠(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="p∈leaving_passengers"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="leave_one/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8" org.eventb.core.prSets="Users">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2,p1,p4,p5,p3,p7,p8,p9">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="leaving_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="p" org.eventb.core.type="Users"/>
+<org.eventb.core.prIdent name="passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="waiting" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="leaving_passengers ∖ {p}⊆passengers ∖ {p}"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(Users)"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬leaving_passengers=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="n∈ℕ"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="finite(passengers)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="waiting⊆Users"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="passengers∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="card(passengers)≤n"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="passengers⊆Users"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="leaving_passengers≠(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="leaving_passengers⊆passengers"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="p∈leaving_passengers"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="enter_one_waiting/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10" org.eventb.core.prSets="Users">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p11"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p3,p1,p6,p7,p4,p8,p2,p9,p10,p11">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="gone_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="leaving_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="u" org.eventb.core.type="Users"/>
+<org.eventb.core.prIdent name="waiting" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="n∈ℕ"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="gone_passengers⊆Users"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="passengers∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="card(passengers)≤n"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="passengers⊆Users"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="leaving_passengers⊆passengers"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="passengers∩(waiting∪{u})=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="gone_passengers∩passengers=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(Users)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="gone_passengers∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(passengers)"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="waiting⊆Users"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="Users ∖ (waiting∪passengers∪gone_passengers)≠(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬Users⊆waiting∪passengers∪gone_passengers"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="u∈Users ∖ (waiting∪passengers∪gone_passengers)"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="Users">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(Users))∩(∅ ⦂ ℙ(Users))=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="Users">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3,p4"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p5" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="passengers'" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(Users))∩passengers'=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="passengers'⊆Users∧card(passengers')≤n∧leaving_passengers'⊆passengers'">
+<org.eventb.core.prIdent name="leaving_passengers'" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="leaving_passengers'⊆passengers'">
+<org.eventb.core.prIdent name="leaving_passengers'" org.eventb.core.type="ℙ(Users)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="passengers'⊆Users"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="card(passengers')≤n">
+<org.eventb.core.prIdent name="n" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="leave_one/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9" org.eventb.core.prSets="Users" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p10"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="sl/ds" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p1,p4,p5,p3,p7,p9"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2,p8,p10,p1,p4,p5,p3,p7,p9">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R30000"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="gone_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="leaving_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="p" org.eventb.core.type="Users"/>
+<org.eventb.core.prIdent name="passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="waiting" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="gone_passengers⊆Users"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="passengers∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="card(passengers)≤n"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="passengers⊆Users"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="leaving_passengers⊆passengers"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="gone_passengers∩passengers=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(Users)"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬leaving_passengers=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="gone_passengers∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="finite(passengers)"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="waiting⊆Users"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="leaving_passengers≠(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(gone_passengers∪{p})∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="p∈leaving_passengers"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.mngHyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="leave_one/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10" org.eventb.core.prSets="Users">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p12">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p11"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p12" org.eventb.core.prHyps="p3,p1,p5,p6,p4,p8,p2,p9,p10,p11">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="gone_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="leaving_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="p" org.eventb.core.type="Users"/>
+<org.eventb.core.prIdent name="passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="waiting" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="n∈ℕ"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="gone_passengers⊆Users"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="passengers∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="card(passengers)≤n"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="passengers⊆Users"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="(gone_passengers∪{p})∩passengers⊆{p}"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="leaving_passengers⊆passengers"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="gone_passengers∩passengers=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(Users)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬leaving_passengers=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="gone_passengers∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(passengers)"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="waiting⊆Users"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(gone_passengers∪{p})∩(passengers ∖ {p})=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="leaving_passengers≠(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="p∈leaving_passengers"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="enter_one/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11" org.eventb.core.prSets="Users">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p13">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p12"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p13" org.eventb.core.prHyps="p4,p1,p8,p9,p5,p10,p3,p11,p7,p2,p12">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="gone_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="leaving_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="waiting" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="waiting_user" org.eventb.core.type="Users"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="n∈ℕ"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="gone_passengers⊆Users"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="passengers∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="card(passengers)≤n"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="passengers⊆Users"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="leaving_passengers⊆passengers"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="gone_passengers∩waiting⊆{waiting_user}"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="gone_passengers∩passengers=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="gone_passengers∩(waiting ∖ {waiting_user})=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(Users)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="waiting_user∈waiting"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="gone_passengers∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(passengers)"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="waiting⊆Users"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="waiting≠(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="card(passengers)&lt;n"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="enter_one/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11" org.eventb.core.prSets="Users">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p12"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p1,p8,p9,p5,p10,p3,p11,p7,p2,p12">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="gone_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="leaving_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="waiting" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="waiting_user" org.eventb.core.type="Users"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="n∈ℕ"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="gone_passengers∩(passengers∪{waiting_user})=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="gone_passengers⊆Users"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="passengers∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="card(passengers)≤n"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="passengers⊆Users"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="leaving_passengers⊆passengers"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="gone_passengers∩passengers=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(Users)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="waiting_user∈waiting"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="gone_passengers∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="finite(passengers)"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="waiting⊆Users"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="waiting≠(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="card(passengers)&lt;n"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="enter_one_waiting/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10" org.eventb.core.prSets="Users">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p11"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p3,p1,p6,p7,p4,p8,p2,p9,p10,p11">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="gone_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="leaving_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prIdent name="u" org.eventb.core.type="Users"/>
+<org.eventb.core.prIdent name="waiting" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="n∈ℕ"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="gone_passengers∩(waiting∪{u})=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="gone_passengers⊆Users"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="passengers∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="card(passengers)≤n"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="passengers⊆Users"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="leaving_passengers⊆passengers"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="gone_passengers∩passengers=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(Users)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="gone_passengers∩waiting=(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(passengers)"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="waiting⊆Users"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="Users ∖ (waiting∪passengers∪gone_passengers)≠(∅ ⦂ ℙ(Users))"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬Users⊆waiting∪passengers∪gone_passengers"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="u∈Users ∖ (waiting∪passengers∪gone_passengers)"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+</org.eventb.core.prProof>
+</org.eventb.core.prFile>

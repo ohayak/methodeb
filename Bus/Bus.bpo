@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="Users" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.poIdentifier name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="Usert" org.eventb.core.predicate="n∈ℕ" org.eventb.core.source="/Bus/Users.buc|org.eventb.core.contextFile#Users|org.eventb.core.axiom#axm3"/>
+<org.eventb.core.poPredicate name="Useru" org.eventb.core.predicate="finite(Users)" org.eventb.core.source="/Bus/Users.buc|org.eventb.core.contextFile#Users|org.eventb.core.axiom#cst3"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="gone_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.poIdentifier name="leaving_passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.poIdentifier name="passengers" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.poIdentifier name="waiting" org.eventb.core.type="ℙ(Users)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="inv4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#HYPUserv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(passengers)" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#HYPUserv"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTALLHYPleaving_passengert">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="passengers'⊆Users∧card(passengers')≤n∧leaving_passengers'⊆passengers'" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#'|org.eventb.core.action#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="passengers'∩(∅ ⦂ ℙ(Users))=(∅ ⦂ ℙ(Users))" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv2"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#HYPUserv|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTALLHYPleaving_passengert">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="passengers'⊆Users∧card(passengers')≤n∧leaving_passengers'⊆passengers'" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#'|org.eventb.core.action#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="card(passengers')≤n" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTALLHYPleaving_passengert">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="passengers'⊆Users∧card(passengers')≤n∧leaving_passengers'⊆passengers'" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#'|org.eventb.core.action#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="leaving_passengers'⊆passengers'" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTALLHYPleaving_passengert"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(Users))∩(∅ ⦂ ℙ(Users))=(∅ ⦂ ℙ(Users))" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv:"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poSequent#INITIALISATION\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTALLHYPleaving_passengert">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="passengers'⊆Users∧card(passengers')≤n∧leaving_passengers'⊆passengers'" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#'|org.eventb.core.action#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(Users))∩passengers'=(∅ ⦂ ℙ(Users))" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv;"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv;"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poSequent#INITIALISATION\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTALLHYPleaving_passengert"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀passengers'⦂ℙ(Users)·passengers'⊆Users⇒finite(passengers')" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#'|org.eventb.core.action#'"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#'|org.eventb.core.action#'"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTALLHYPleaving_passengert"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/act1/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTALLHYPleaving_passengert"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∃passengers'⦂ℙ(Users),leaving_passengers'⦂ℙ(Users)·passengers'⊆Users∧card(passengers')≤n∧leaving_passengers'⊆passengers'" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#'|org.eventb.core.action#'"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#'|org.eventb.core.action#'"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTALLHYPleaving_passengert"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTleaving_passengert" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="waiting'" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.poIdentifier name="passengers'" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.poIdentifier name="leaving_passengers'" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.poIdentifier name="gone_passengers'" org.eventb.core.type="ℙ(Users)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPleaving_passengert" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTIDENTleaving_passengert" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="leave_one/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTALLHYPleaving_passengeru"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(passengers ∖ {p})∩waiting=(∅ ⦂ ℙ(Users))" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#inv4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv2"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poSequent#leave_one\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#HYPUserv|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="leave_one/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTALLHYPleaving_passengeru"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="card(passengers ∖ {p})≤n" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#inv4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poSequent#leave_one\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="leave_one/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTALLHYPleaving_passengeru"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="leaving_passengers ∖ {p}⊆passengers ∖ {p}" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#inv4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poSequent#leave_one\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="leave_one/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTALLHYPleaving_passengeru"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(gone_passengers∪{p})∩waiting=(∅ ⦂ ℙ(Users))" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#inv4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv:"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poSequent#leave_one\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="leave_one/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTALLHYPleaving_passengeru"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(gone_passengers∪{p})∩(passengers ∖ {p})=(∅ ⦂ ℙ(Users))" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv;"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#inv4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv;"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poSequent#leave_one\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTleaving_passengeru" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Users"/>
+<org.eventb.core.poIdentifier name="passengers'" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.poIdentifier name="leaving_passengers'" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.poIdentifier name="gone_passengers'" org.eventb.core.type="ℙ(Users)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPleaving_passengeru" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTIDENTleaving_passengeru" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="leaving_passengers≠(∅ ⦂ ℙ(Users))" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#inv4|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="p∈leaving_passengers" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#inv4|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="enter_one/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTHYPleaving_passengerv'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(passengers)" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#inv5|org.eventb.core.guard#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#inv5|org.eventb.core.guard#)"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTHYPleaving_passengerv'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="enter_one/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTALLHYPleaving_passengerv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(passengers∪{waiting_user})∩(waiting ∖ {waiting_user})=(∅ ⦂ ℙ(Users))" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#inv5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv2"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poSequent#enter_one\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#HYPUserv|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="enter_one/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTALLHYPleaving_passengerv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="card(passengers∪{waiting_user})≤n" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#inv5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poSequent#enter_one\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="enter_one/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTALLHYPleaving_passengerv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="leaving_passengers⊆passengers∪{waiting_user}" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#inv5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poSequent#enter_one\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="enter_one/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTALLHYPleaving_passengerv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="gone_passengers∩(waiting ∖ {waiting_user})=(∅ ⦂ ℙ(Users))" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#inv5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv:"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poSequent#enter_one\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="enter_one/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTALLHYPleaving_passengerv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="gone_passengers∩(passengers∪{waiting_user})=(∅ ⦂ ℙ(Users))" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv;"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#inv5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv;"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poSequent#enter_one\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTleaving_passengerv" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="waiting_user" org.eventb.core.type="Users"/>
+<org.eventb.core.poIdentifier name="waiting'" org.eventb.core.type="ℙ(Users)"/>
+<org.eventb.core.poIdentifier name="passengers'" org.eventb.core.type="ℙ(Users)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPleaving_passengerv'" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTIDENTleaving_passengerv" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="waiting≠(∅ ⦂ ℙ(Users))" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#inv5|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPleaving_passengerv" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTHYPleaving_passengerv'" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="card(passengers)&lt;n" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#inv5|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="waiting_user∈waiting" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#inv5|org.eventb.core.guard#-"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="enter_one_waiting/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTALLHYPleaving_passengerw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="passengers∩(waiting∪{u})=(∅ ⦂ ℙ(Users))" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#inv7"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv2"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poSequent#enter_one_waiting\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#HYPUserv|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="enter_one_waiting/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTALLHYPleaving_passengerw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="gone_passengers∩(waiting∪{u})=(∅ ⦂ ℙ(Users))" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#inv7"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv:"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poSequent#enter_one_waiting\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTleaving_passengerw" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="u" org.eventb.core.type="Users"/>
+<org.eventb.core.poIdentifier name="waiting'" org.eventb.core.type="ℙ(Users)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPleaving_passengerw" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#EVTIDENTleaving_passengerw" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="Users ∖ (waiting∪passengers∪gone_passengers)≠(∅ ⦂ ℙ(Users))" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#inv7|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="u∈Users ∖ (waiting∪passengers∪gone_passengers)" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.event#inv7|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPUserv" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="passengers⊆Users" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#+"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="waiting⊆Users" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="passengers∩waiting=(∅ ⦂ ℙ(Users))" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Bus/Bus.bpo|org.eventb.core.poFile#Bus|org.eventb.core.poPredicateSet#HYPUserv" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="card(passengers)≤n" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="leaving_passengers⊆passengers" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="gone_passengers⊆Users" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv9"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="gone_passengers∩waiting=(∅ ⦂ ℙ(Users))" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv:"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="gone_passengers∩passengers=(∅ ⦂ ℙ(Users))" org.eventb.core.source="/Bus/Bus.bum|org.eventb.core.machineFile#Bus|org.eventb.core.invariant#inv;"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>
