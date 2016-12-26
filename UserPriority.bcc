@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/methodeb/Users.bcc|org.eventb.core.scContextFile#Users" org.eventb.core.source="/methodeb/UserPriority.buc|org.eventb.core.contextFile#UserPriority|org.eventb.core.extendsContext#'"/>
+<org.eventb.core.scInternalContext name="Users">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="finite(users)" org.eventb.core.source="/methodeb/Users.buc|org.eventb.core.contextFile#Users|org.eventb.core.axiom#(" org.eventb.core.theorem="true"/>
+<org.eventb.core.scCarrierSet name="users" org.eventb.core.source="/methodeb/Users.buc|org.eventb.core.contextFile#Users|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(users)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scAxiom name="Usert" org.eventb.core.label="axm1" org.eventb.core.predicate="priority∈users → ℕ" org.eventb.core.source="/methodeb/UserPriority.buc|org.eventb.core.contextFile#UserPriority|org.eventb.core.axiom#(" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="Useru" org.eventb.core.label="axm2" org.eventb.core.predicate="∀E⦂ℙ(users)·E⊆users⇒(∃u⦂users·u∈E∧(∀w⦂users·w∈E⇒priority(w)≤priority(u)))" org.eventb.core.source="/methodeb/UserPriority.buc|org.eventb.core.contextFile#UserPriority|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="priority" org.eventb.core.source="/methodeb/UserPriority.buc|org.eventb.core.contextFile#UserPriority|org.eventb.core.constant#*" org.eventb.core.type="ℙ(users×ℤ)"/>
+</org.eventb.core.scContextFile>

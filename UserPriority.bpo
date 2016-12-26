@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="users" org.eventb.core.type="ℙ(users)"/>
+<org.eventb.core.poPredicate name="usert" org.eventb.core.predicate="finite(users)" org.eventb.core.source="/methodeb/Users.buc|org.eventb.core.contextFile#Users|org.eventb.core.axiom#("/>
+<org.eventb.core.poIdentifier name="priority" org.eventb.core.type="ℙ(users×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="axm2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/methodeb/UserPriority.bpo|org.eventb.core.poFile#UserPriority|org.eventb.core.poPredicateSet#HYPUsert"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀E⦂ℙ(users)·E⊆users⇒(∀u⦂users·u∈E⇒(∀w⦂users·w∈E⇒w∈dom(priority)∧priority∈users ⇸ ℤ∧u∈dom(priority)))" org.eventb.core.source="/methodeb/UserPriority.buc|org.eventb.core.contextFile#UserPriority|org.eventb.core.axiom#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/methodeb/UserPriority.buc|org.eventb.core.contextFile#UserPriority|org.eventb.core.axiom#)"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/methodeb/UserPriority.bpo|org.eventb.core.poFile#UserPriority|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/methodeb/UserPriority.bpo|org.eventb.core.poFile#UserPriority|org.eventb.core.poPredicateSet#HYPUsert"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="HYPUsert" org.eventb.core.parentSet="/methodeb/UserPriority.bpo|org.eventb.core.poFile#UserPriority|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="priority∈users → ℕ" org.eventb.core.source="/methodeb/UserPriority.buc|org.eventb.core.contextFile#UserPriority|org.eventb.core.axiom#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/methodeb/UserPriority.bpo|org.eventb.core.poFile#UserPriority|org.eventb.core.poPredicateSet#HYPUsert" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∀E⦂ℙ(users)·E⊆users⇒(∃u⦂users·u∈E∧(∀w⦂users·w∈E⇒priority(w)≤priority(u)))" org.eventb.core.source="/methodeb/UserPriority.buc|org.eventb.core.contextFile#UserPriority|org.eventb.core.axiom#)"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

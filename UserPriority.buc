@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.extendsContext name="'" org.eventb.core.target="Users"/>
+<org.eventb.core.axiom name="(" org.eventb.core.label="axm1" org.eventb.core.predicate="priority ∈ users → ℕ"/>
+<org.eventb.core.axiom name=")" org.eventb.core.label="axm2" org.eventb.core.predicate="∀ E·E ⊆ users ⇒ (∃ u·u∈E ∧ ∀w·((w∈ E) ⇒ (priority(w) ≤ priority(u))))"/>
+<org.eventb.core.constant name="*" org.eventb.core.identifier="priority"/>
+</org.eventb.core.contextFile>

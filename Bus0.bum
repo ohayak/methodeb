@@ -3,19 +3,24 @@
 <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
 <org.eventb.core.action name="(" org.eventb.core.assignment="waiting ≔ ∅" org.eventb.core.label="act2"/>
 <org.eventb.core.action name="'" org.eventb.core.assignment="passengers :∈ ℙ(users)" org.eventb.core.label="act1"/>
-<org.eventb.core.action name=")" org.eventb.core.assignment="passengers_leaving ≔∅" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="counter ≔ 0" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="order ≔ ∅" org.eventb.core.label="act5"/>
 </org.eventb.core.event>
 <org.eventb.core.seesContext name="(" org.eventb.core.target="BusCapacity"/>
 <org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="USER_ARRIVES">
 <org.eventb.core.action name="'" org.eventb.core.assignment="waiting ≔ waiting ∪ {user}" org.eventb.core.label="act1"/>
 <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ users ∧ user ∉ waiting ∧ user ∉ passengers" org.eventb.core.theorem="true"/>
 <org.eventb.core.parameter name="*" org.eventb.core.identifier="user"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="order(user) ≔ counter" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="counter ≔ counter + 1" org.eventb.core.label="act3"/>
 </org.eventb.core.event>
 <org.eventb.core.event name=")" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="USER_ENTERS">
 <org.eventb.core.action name=")" org.eventb.core.assignment="waiting ≔ waiting ∖ {user}" org.eventb.core.label="act1"/>
 <org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="user ∈ waiting"/>
 <org.eventb.core.action name="+" org.eventb.core.assignment="passengers ≔ passengers ∪ {user}" org.eventb.core.label="act2"/>
 <org.eventb.core.parameter name="," org.eventb.core.identifier="user"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="∀ u·u ∈ waiting ⇒ priority(u) ≤ priority(user)"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd6" org.eventb.core.predicate="∀ u·u ∈ waiting ∧ u ≠ user ∧ priority(u) = priority(user) ⇒ order(u) &lt; order(user)"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="*" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="USER_LEAVES">
 <org.eventb.core.action name="(" org.eventb.core.assignment="passengers ≔ passengers ∖ {user}" org.eventb.core.label="act1"/>
@@ -27,10 +32,13 @@
 <org.eventb.core.invariant name="3" org.eventb.core.label="inv3" org.eventb.core.predicate="waiting ⊆ users"/>
 <org.eventb.core.invariant name="," org.eventb.core.label="inv1" org.eventb.core.predicate="passengers ⊆ users"/>
 <org.eventb.core.invariant name="6" org.eventb.core.label="inv5" org.eventb.core.predicate="waiting ∩ passengers = ∅"/>
-<org.eventb.core.invariant name="5" org.eventb.core.label="inv4" org.eventb.core.predicate="finite(passengers)"/>
-<org.eventb.core.event name="4" org.eventb.core.convergence="2" org.eventb.core.extended="false" org.eventb.core.label="BUS_LEAVES"/>
-<org.eventb.core.seesContext name="7" org.eventb.core.target="Users"/>
-<org.eventb.core.variable name="8" org.eventb.core.identifier="passengers_leaving"/>
-<org.eventb.core.invariant name="9" org.eventb.core.label="inv6" org.eventb.core.predicate="passengers_leaving⊆passengers"/>
+<org.eventb.core.event name="4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="BUS_LEAVES">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="(waiting ≠ ∅ ∧ card(passengers) = capacity) ∨ waiting = ∅"/>
+</org.eventb.core.event>
 <org.eventb.core.invariant name=":" org.eventb.core.label="inv7" org.eventb.core.predicate="card(passengers) ≤ capacity"/>
+<org.eventb.core.seesContext name=";" org.eventb.core.target="UserPriority"/>
+<org.eventb.core.variable name="&gt;" org.eventb.core.identifier="counter"/>
+<org.eventb.core.invariant name="?" org.eventb.core.label="inv8" org.eventb.core.predicate="counter ∈ ℕ"/>
+<org.eventb.core.variable name="@" org.eventb.core.identifier="order"/>
+<org.eventb.core.invariant name="A" org.eventb.core.label="inv9" org.eventb.core.predicate="order ∈ users → ℕ"/>
 </org.eventb.core.machineFile>

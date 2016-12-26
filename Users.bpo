@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="4">
+<org.eventb.core.poFile org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="3">
 <org.eventb.core.poIdentifier name="users" org.eventb.core.type="ℙ(users)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="axm1/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="4">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Users.bpo|org.eventb.core.poFile#Users|org.eventb.core.poPredicateSet#ABSHYP"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(users)" org.eventb.core.source="/Bus/Users.buc|org.eventb.core.contextFile#Users|org.eventb.core.axiom#("/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Users.buc|org.eventb.core.contextFile#Users|org.eventb.core.axiom#("/>
-<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Bus/Users.bpo|org.eventb.core.poFile#Users|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Bus/Users.bpo|org.eventb.core.poFile#Users|org.eventb.core.poPredicateSet#ABSHYP"/>
+<org.eventb.core.poSequent name="axm1/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/methodeb/Users.bpo|org.eventb.core.poFile#Users|org.eventb.core.poPredicateSet#ABSHYP"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(users)" org.eventb.core.source="/methodeb/Users.buc|org.eventb.core.contextFile#Users|org.eventb.core.axiom#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/methodeb/Users.buc|org.eventb.core.contextFile#Users|org.eventb.core.axiom#("/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/methodeb/Users.bpo|org.eventb.core.poFile#Users|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/methodeb/Users.bpo|org.eventb.core.poFile#Users|org.eventb.core.poPredicateSet#ABSHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Bus/Users.bpo|org.eventb.core.poFile#Users|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="4">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="finite(users)" org.eventb.core.source="/Bus/Users.buc|org.eventb.core.contextFile#Users|org.eventb.core.axiom#("/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/methodeb/Users.bpo|org.eventb.core.poFile#Users|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="finite(users)" org.eventb.core.source="/methodeb/Users.buc|org.eventb.core.contextFile#Users|org.eventb.core.axiom#("/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
