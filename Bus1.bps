@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+<org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="29" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="29" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="29" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="USER_ARRIVES/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="30" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="USER_ARRIVES/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="30" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="USER_ENTERS/grd7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="28" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="USER_ENTERS/grd8/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="28" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="USER_ENTERS/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="30" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="USER_LEAVES/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="31" org.eventb.core.psManual="false"/>
+</org.eventb.core.psFile>

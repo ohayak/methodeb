@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="Bus0"/>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="BusCapacity"/>
+<org.eventb.core.seesContext name=";" org.eventb.core.target="UserPriority"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="passengers"/>
+<org.eventb.core.variable name="2" org.eventb.core.identifier="waiting"/>
+<org.eventb.core.variable name="J" org.eventb.core.identifier="leaving"/>
+<org.eventb.core.variable name="F" org.eventb.core.identifier="counter"/>
+<org.eventb.core.event name="A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="counter ≔ 0" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="order ≔ ∅" org.eventb.core.label="act4"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="leaving ≔ ∅" org.eventb.core.label="act6"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="B" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="USER_ARRIVES">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="USER_ARRIVES"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="waiting ≔ waiting ∪ {user}" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="users ∖ ( passengers ∪ waiting ) ≠ ∅"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ users ∖ ( passengers ∪ waiting )" org.eventb.core.theorem="true"/>
+<org.eventb.core.parameter name="*" org.eventb.core.identifier="user"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="order(user) ≔ counter" org.eventb.core.label="act4"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="counter ≔ counter + 1" org.eventb.core.label="act5"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="C" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="USER_ENTERS">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="USER_ENTERS"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd7" org.eventb.core.predicate="∀ u·u ∈ waiting ⇒ priority(u) ≤ priority(user)"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd8" org.eventb.core.predicate="∀ u·u ∈ waiting ∧ u ≠ user ∧ priority(u) = priority(user) ⇒ order(u) &lt; order(user)"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd9" org.eventb.core.predicate="leaving = ∅"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="D" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="USER_LEAVES">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="USER_LEAVES"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd3" org.eventb.core.predicate="user ∈ leaving"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="leaving ≔ leaving ∖ {user}" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="E" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="BUS_LEAVES">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="BUS_LEAVES"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="G" org.eventb.core.identifier="order"/>
+<org.eventb.core.invariant name="H" org.eventb.core.label="inv1" org.eventb.core.predicate="order ∈ users → ℕ"/>
+<org.eventb.core.invariant name="K" org.eventb.core.label="inv3" org.eventb.core.predicate="leaving ∈ ℙ(passengers)"/>
+<org.eventb.core.invariant name="I" org.eventb.core.label="inv2" org.eventb.core.predicate="counter ∈ ℕ"/>
+</org.eventb.core.machineFile>
