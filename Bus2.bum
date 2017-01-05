@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="Bus1"/>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="BusCapacity"/>
+<org.eventb.core.seesContext name=";" org.eventb.core.target="UserPriority"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="passengers"/>
+<org.eventb.core.variable name="2" org.eventb.core.identifier="waiting"/>
+<org.eventb.core.variable name="J" org.eventb.core.identifier="leaving"/>
+<org.eventb.core.variable name="F" org.eventb.core.identifier="counter"/>
+<org.eventb.core.variable name="G" org.eventb.core.identifier="order"/>
+<org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.event name="L" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="USER_ARRIVES">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="USER_ARRIVES"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="M" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="USER_ENTERS">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="USER_ENTERS"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="N" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="USER_LEAVES">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="USER_LEAVES"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="O" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="BUS_LEAVES">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="BUS_LEAVES"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="R" org.eventb.core.label="inv1" org.eventb.core.predicate="∀ w· w ∈ waiting ⇒ w ∈ dom(order)"/>
+<org.eventb.core.invariant name="P" org.eventb.core.label="NBLOCK" org.eventb.core.predicate="(leaving ≠ ∅) ∨ ((leaving = ∅)∧(card(passengers)&lt;capacity)) ∨ (users∖(waiting ∪ passengers)≠∅) ∨ ((leaving = ∅)∧(card(passengers)=capacity)) ∨ ((leaving = ∅)∧(waiting = ∅))"/>
+<org.eventb.core.invariant name="Q" org.eventb.core.label="NBLOCKPRIORITY" org.eventb.core.predicate="waiting ≠ ∅ ⇒ (∃ u· ∀w· u∈waiting ∧  (w ∈ waiting ⇒ (priority(u) ≥ priority(w) ∧ ( ((priority(w) = priority(u))∧(w ≠ u)) ⇒ order(u) &lt; order(w)))))"/>
+<org.eventb.core.invariant name="S" org.eventb.core.label="ORDERVERIFY" org.eventb.core.predicate="∀ u·∀v· (u ∈ dom(order) ∧ v ∈ dom(order) ∧ u ≠ v) ⇒ order(u) ≠ order(v)"/>
+</org.eventb.core.machineFile>

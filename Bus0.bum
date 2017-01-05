@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
 <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
-<org.eventb.core.action name=")" org.eventb.core.assignment="passengers :∈ ℙ1(users)" org.eventb.core.label="act3"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="passengers :∣ (passengers' ⊆ users) ∧ (card(passengers') ≤ capacity) " org.eventb.core.label="act3"/>
 <org.eventb.core.action name="(" org.eventb.core.assignment="waiting ≔ ∅" org.eventb.core.label="act2"/>
 </org.eventb.core.event>
 <org.eventb.core.seesContext name="(" org.eventb.core.target="BusCapacity"/>
@@ -20,17 +20,18 @@
 </org.eventb.core.event>
 <org.eventb.core.event name="*" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="USER_LEAVES">
 <org.eventb.core.action name="(" org.eventb.core.assignment="passengers ≔ passengers ∖ {user}" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="passengers ≠ ∅"/>
 <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="user ∈ passengers"/>
 <org.eventb.core.parameter name="*" org.eventb.core.identifier="user"/>
 </org.eventb.core.event>
 <org.eventb.core.variable name="+" org.eventb.core.identifier="passengers"/>
 <org.eventb.core.variable name="2" org.eventb.core.identifier="waiting"/>
-<org.eventb.core.invariant name="3" org.eventb.core.label="inv3" org.eventb.core.predicate="waiting ∈ ℙ(users)"/>
-<org.eventb.core.invariant name="," org.eventb.core.label="inv1" org.eventb.core.predicate="passengers ∈ ℙ(users)"/>
-<org.eventb.core.invariant name="6" org.eventb.core.label="inv5" org.eventb.core.predicate="waiting ∩ passengers = ∅"/>
+<org.eventb.core.invariant name="3" org.eventb.core.label="inv3" org.eventb.core.predicate="waiting ⊆ users" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="," org.eventb.core.label="inv1" org.eventb.core.predicate="passengers ⊆ users" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="6" org.eventb.core.label="inv5" org.eventb.core.predicate="waiting ∩ passengers = ∅" org.eventb.core.theorem="true"/>
 <org.eventb.core.event name="4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="BUS_LEAVES">
 <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="(waiting ≠ ∅ ∧ card(passengers) = capacity) ∨ waiting = ∅"/>
 </org.eventb.core.event>
-<org.eventb.core.invariant name=":" org.eventb.core.label="inv7" org.eventb.core.predicate="card(passengers) ≤ capacity"/>
+<org.eventb.core.invariant name=":" org.eventb.core.label="inv7" org.eventb.core.predicate="card(passengers) ≤ capacity" org.eventb.core.theorem="true"/>
 <org.eventb.core.seesContext name=";" org.eventb.core.target="Users"/>
 </org.eventb.core.machineFile>
